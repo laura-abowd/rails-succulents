@@ -4,4 +4,11 @@ class SucculentsController < ApplicationController
     @succulents = Succulent.all
   end
 
+  def new
+    @succulent = Succulent.new
+  end
+
+  def create
+
+  end
 end
