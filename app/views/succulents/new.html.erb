@@ -1,11 +1,13 @@
 <p><%= link_to 'Back to your Succulents', succulents_path %></p>
 
-<%= form_for @succulent do |f| %>
+<%= simple_form_for @succulent do |f| %>
   <%= f.label :name %> <br />
   <%= f.text_field :name %> <br />
 
   <%= f.label :description %> <br />
   <%= f.text_area :description %><br />
-
+  <%= f.input :photo %><br />
+  <%= f.input :photo_cache, as: :hidden %><br />
   <%= f.submit 'Save' %>
+
 <% end %>

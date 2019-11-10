@@ -36,6 +36,6 @@ end
 
   private
     def succulent_params
-      params.require(:succulent).permit(:name, :description)
+      params.require(:succulent).permit(:name, :description, :photo)
     end
 end

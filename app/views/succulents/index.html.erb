@@ -11,8 +11,8 @@
   <div class="card-category">
     <% @succulents.each do |succulent| %>
     <div class="card" style="width: 18rem;">
-      <img src="..." class="card-img-top" alt="...">
       <div class="card-body">
+         <%= cl_image_tag succulent.photo, crop: :fill, class: "card-img-top" %>
         <h5 class="card-title"><%= succulent.name %></h5>
         <p class="card-text"><%= succulent.description %></p>
         <p class="btn btn-light"><%= link_to 'Edit' , edit_succulent_path(succulent) %></p>
