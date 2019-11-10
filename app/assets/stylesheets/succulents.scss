@@ -2,9 +2,30 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .home-banner {
-  background-image: url("https://images.unsplash.com/photo-1555483445-e6863207e2e4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80");
+  background-image: url("https://images.unsplash.com/photo-1493957988430-a5f2e15f39a3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80");
   background-size: cover;
-  height: 500px;
   background-position: center;
-  text-align: center;
+  margin: 50px;
+  height: 100vh;
+  max-height: 500px;
+  color: #636466;
+}
+
+.home-banner h1 {
+  font-family: 'IBM Plex Sans', sans-serif;
+  text-align: left;
+  font-size: 60px;
+}
+
+.content-banner {
+  padding-top: 24vh;
+  padding-left: 24px;
+}
+
+.card-category {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+  margin-bottom: 24px;
+  justify-items: center;
 }
