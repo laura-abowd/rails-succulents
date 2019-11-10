@@ -28,6 +28,10 @@ def update
   else
     render new
   end
+
+  def show
+    @succulent =  Succulent.find(params[:id])
+  end
 end
 
   private
