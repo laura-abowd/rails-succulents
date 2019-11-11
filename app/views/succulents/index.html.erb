@@ -1,24 +1,31 @@
 <div class="container">
   <div class="home-banner">
-<div class="content-banner">
-    <h1>Sweet Succulents</h1>
-    <p> <button type="button" class="btn btn-light">
-      <%= link_to 'Add a new succulent.', new_succulent_path %>
-    </button></p>
+    <div class="content-banner">
+      <h1>Sweet Succulents</h1>
+      <p>
+        <button type="button" class="btn btn-light">
+          <%= link_to 'Add a new succulent.', new_succulent_path %>
+        </button>
+      </p>
     </div>
-</div>
+  </div>
 
-  <div class="card-category">
+  <div class="card-container">
     <% @succulents.each do |succulent| %>
-    <div class="card" style="width: 18rem;">
-      <div class="card-body">
-         <%= cl_image_tag succulent.photo, class: "card-img-top" %>
-        <h5 class="card-title"><%= succulent.name %></h5>
-        <p class="card-text"><%= succulent.description %></p>
-        <p class="btn btn-light"><%= link_to 'Edit' , edit_succulent_path(succulent) %></p>
+      <div class="card card-front" style="width: 18rem;">
+        <div class="card-body">
+          <%= cl_image_tag succulent.photo, class: "card-img-top" %>
+          <h5 class="card-title"><%= succulent.name %></h5>
+          <p class="card-text"><%= succulent.description %></p>
+          <p class="btn btn-light"><%= link_to 'Edit' , edit_succulent_path(succulent) %></p>
+</div>
       </div>
+      <div class="card card-back" style="width: 18rem;">
+        <div class="card-body">
+          <p>This is the back!</p>
+        </div>
+
     </div>
-  <%end%>
-</div>
-</div>
-</div>
+        <%end%>
+
+  </div>

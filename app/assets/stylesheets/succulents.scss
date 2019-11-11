@@ -22,12 +22,30 @@
   padding-left: 24px;
 }
 
-.card-category {
+.card-container {
+  position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
   margin-bottom: 24px;
   justify-items: center;
+}
+
+.card-container:hover .card-front {
+  transform: rotateY(180deg);
+}
+
+.card-container:hover .card-back {
+  transform: rotateY(180deg);
+}
+
+.card-back {
+  transform: rotateY(180deg);
+}
+
+.card {
+  position: absolute;
+  transition: all 0.9s;
 }
 
 .card-img-top {
