@@ -9,23 +9,31 @@
       </p>
     </div>
   </div>
-
   <div class="card-container">
     <% @succulents.each do |succulent| %>
-      <div class="card card-front" style="width: 18rem;">
-        <div class="card-body">
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="card card-front" style="width: 18rem;">
+          <!--      <div class="card-body"> -->
           <%= cl_image_tag succulent.photo, class: "card-img-top" %>
-          <h5 class="card-title"><%= succulent.name %></h5>
-          <p class="card-text"><%= succulent.description %></p>
-          <p class="btn btn-light"><%= link_to 'Edit' , edit_succulent_path(succulent) %></p>
-</div>
-      </div>
-      <div class="card card-back" style="width: 18rem;">
-        <div class="card-body">
-          <p>This is the back!</p>
+          <h5 class="card-title">
+            <%= succulent.name %>
+          </h5>
+          <p class="card-text">
+            <%= succulent.description %>
+          </p>
+          <p class="btn btn-light">
+            <%= link_to 'Edit' , edit_succulent_path(succulent) %>
+          </p>
+          <!--       </div> -->
         </div>
-
+        <div class="card card-back" style="width: 18rem;">
+          <!--  <div class="card-body"> -->
+          <p>This is the back!</p>
+          <!--         </div> -->
+        </div>
+      </div>
     </div>
-        <%end%>
-
+    <%end%>
   </div>
+</div>
