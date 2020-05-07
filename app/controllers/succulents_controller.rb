@@ -2,6 +2,8 @@ class SucculentsController < ApplicationController
 
   def index
     @succulents = Succulent.all
+    @meeting = Meeting.all
+    # @contact = Succulent.new(params[:home])
   end
 
   def new
